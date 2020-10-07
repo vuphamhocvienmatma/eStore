@@ -1,7 +1,5 @@
 ﻿using eShopSolution.Data.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.Entities
 {
@@ -17,6 +15,5 @@ namespace eShopSolution.Data.Entities
         public string ProductCategoryIds { set; get; }
         public Status Status { set; get; }
         public string Name { set; get; }
-
     }
 }

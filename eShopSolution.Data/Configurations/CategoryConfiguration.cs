@@ -2,9 +2,6 @@
 using eShopSolution.Data.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.Configurations
 {
@@ -17,7 +14,6 @@ namespace eShopSolution.Data.Configurations
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id).UseIdentityColumn();
-
 
             builder.Property(x => x.Status).HasDefaultValue(Status.Active);
         }

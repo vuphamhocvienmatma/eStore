@@ -18,6 +18,12 @@ namespace eShopSolution.Application.System.Users
         private readonly RoleManager<AppRole> _roleManager;
         private readonly IConfiguration _config;
 
+        private string errors = "";
+
+        public UserService()
+        {
+        }
+
         public UserService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager,
             RoleManager<AppRole> roleManager, IConfiguration config)
         {
@@ -38,10 +44,10 @@ namespace eShopSolution.Application.System.Users
                 return null;
             }
             var roles = await _userManager.GetRolesAsync(user);
-            var claims = new[]
+            var claims = new[] //trường PayLoad của JWT
             {
-                new Claim(ClaimTypes.Email,user.Email),
                 new Claim(ClaimTypes.GivenName,user.FirstName),
+                new Claim(ClaimTypes.HomePhone,user.PhoneNumber),
                 new Claim(ClaimTypes.Role, string.Join(";",roles))
             };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Tokens:Key"]));
@@ -72,7 +78,11 @@ namespace eShopSolution.Application.System.Users
             {
                 return true;
             }
-            return false;
+            else
+            {
+                errors = result.Errors.ToString();
+                return false;
+            }
         }
     }
 }

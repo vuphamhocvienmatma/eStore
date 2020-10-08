@@ -42,7 +42,7 @@ namespace eShopSolution.BackendApi.Controllers
             var result = await _userService.Register(request);
             if (!result)
             {
-                return BadRequest("Register is unsuccessful.");
+                return BadRequest();
             }
             return Ok();
         }

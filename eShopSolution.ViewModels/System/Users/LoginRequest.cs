@@ -6,6 +6,6 @@
 
         public string Passwrod { get; set; }
 
-        public bool RememberMe { get; set; }
+        public bool? RememberMe { get; set; }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using eShopSolution.Data.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.Entities
 {
@@ -20,6 +18,5 @@ namespace eShopSolution.Data.Entities
         public Guid UserId { get; set; }
 
         public AppUser AppUser { get; set; }
-
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace eShopSolution.Data.Entities
 {
@@ -14,6 +12,6 @@ namespace eShopSolution.Data.Entities
 
         public List<ProductTranslation> ProductTranslations { get; set; }
 
-        public List<CategoryTranslation> CategoryTranslations   { get; set; }
+        public List<CategoryTranslation> CategoryTranslations { get; set; }
     }
 }

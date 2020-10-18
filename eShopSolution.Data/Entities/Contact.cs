@@ -1,7 +1,4 @@
 ﻿using eShopSolution.Data.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.Entities
 {
@@ -13,6 +10,5 @@ namespace eShopSolution.Data.Entities
         public string PhoneNumber { set; get; }
         public string Message { set; get; }
         public Status Status { set; get; }
-
     }
 }

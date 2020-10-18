@@ -3,8 +3,6 @@ using eShopSolution.Data.Enums;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace eShopSolution.Data.Extensions
 {
@@ -109,7 +107,7 @@ namespace eShopSolution.Data.Extensions
                 SecurityStamp = string.Empty,
                 FirstName = "Toan",
                 LastName = "Bach",
-                Dob = new DateTime(2020,01,31)
+                Dob = new DateTime(2020, 01, 31)
             });
 
             modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(new IdentityUserRole<Guid>
@@ -118,9 +116,5 @@ namespace eShopSolution.Data.Extensions
                 UserId = adminId
             });
         }
-
-        
-
-
     }
 }
